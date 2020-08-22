@@ -12,7 +12,6 @@ import java.util.List;
 public class FourthPartOfHomeWork {
     private WebDriver driver;
     TablePom page = new TablePom();
-    private String text;
 
     @When("^Verify the data of the \"([^\"]*)\"$")
     public void verify_the_data_of_the(String info) {
