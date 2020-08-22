@@ -5,12 +5,5 @@ Feature: Verification the count of items
     When I try try to login using Username as "Tester" and Password as "test"
     Then I am logged in
 
-  Scenario: Verification the count of items are deleted successfully
-    When I entered to a "View all orders" screen
-    And Verify items are displayed
-      | Expected |
-      | 8        |
-    And I delete all items from the table
-    Then Verify items are displayed
-      | Expected |
-      | 0        |
+    Scenario: Successfully creation an order
+      When I entered to a "Order" screen

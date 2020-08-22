@@ -5,9 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.List;
 
 public class BasePom {
     protected WebDriverWait wait;
@@ -15,8 +15,8 @@ public class BasePom {
 
     public BasePom() {
         driver = BaseDriver.getDriver();
-        wait = new WebDriverWait( driver, 10);
-        PageFactory.initElements( driver,this );
+        wait = new WebDriverWait( driver, 10 );
+        PageFactory.initElements( driver, this );
     }
 
     public void waitAndSendKeys(WebElement locator, String text) {
@@ -24,8 +24,8 @@ public class BasePom {
             WebElement webElement = wait.until( ExpectedConditions.visibilityOf( locator ) );
             webElement.clear();
             webElement.sendKeys( text );
-        }catch (NullPointerException nullPoint){
-            System.out.println(nullPoint.getMessage());
+        } catch (NullPointerException nullPoint) {
+            System.out.println( nullPoint.getMessage() );
         }
     }
 
@@ -34,7 +34,13 @@ public class BasePom {
         webElement.click();
     }
 
-    public WebElement elementToBeClickable (WebElement webElement){
-        return wait.until( ExpectedConditions.elementToBeClickable(webElement) );
+    public WebElement elementToBeClickable(WebElement webElement) {
+        return wait.until( ExpectedConditions.elementToBeClickable( webElement ) );
+    }
+
+    public String dropdownSelectorByText(WebElement element, String text) {
+        Select select = new Select( element );
+        select.selectByVisibleText( text );
+        return "";
     }
 }

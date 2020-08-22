@@ -22,7 +22,30 @@ public class TablePom extends BasePom {
     public WebElement viewAllOrdersElement;
     @FindBy(xpath = "//a[text()='View all products']")
     public WebElement viewAllProductsElement;
+    @FindBy(xpath = "//a[text()='Order']")
+    public WebElement orderElement;
     @FindBy(css = "[name*='OrderSelector']")
     public List<WebElement> AllOrdersListElement;
-
+    @FindBy(xpath = "//a[text()='Check All']")
+    public WebElement checkAllButton;
+    @FindBy(css = "[class='btnDeleteSelected']")
+    public WebElement deleteAllButton;
+    @FindBy(css = "[id*=_txtName]")
+    public WebElement customerNameInputElement;
+    @FindBy(xpath = "//select[contains(@id,'_ddlProduct')]")
+    public WebElement productSelectorElement;
+    @FindBy(css = "[id*=_TextBox2]")
+    public WebElement streetInputElement;
+    @FindBy(css = "[id*=_TextBox3]")
+    public WebElement cityInputElement;
+    @FindBy(css = "[id*=_TextBox4]")
+    public WebElement stateInputElement;
+    @FindBy(css = "[id*=_TextBox5]")
+    public WebElement zipInputElement;
+    @FindBy(css = "[id*=r_cardList_0]")
+    public WebElement cardRadioElement;
+    @FindBy(css = "[id*=_TextBox6]")
+    public WebElement cardNumberInputElement;
+    @FindBy(css = "[id*=_TextBox1]")
+    public WebElement expirationDateElement;
 }
