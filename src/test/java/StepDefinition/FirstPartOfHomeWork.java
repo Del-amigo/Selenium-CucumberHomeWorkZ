@@ -3,29 +3,14 @@ package StepDefinition;
 import PomZ.TablePom;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.*;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-
 import java.util.List;
 import java.util.Map;
+
 
 public class FirstPartOfHomeWork {
     TablePom page = new TablePom();
 
-    @When("^I entered to a \"([^\"]*)\" screen$")
-    public void i_entered_to_a_screen(String screenName){
-      switch (screenName){
-          case "View all orders":
-              page.waitAndClick( page.viewAllOrdersElement);
-              break;
-          case "View all products":
-              page.waitAndClick( page.viewAllProductsElement );
-              break;
-          case "Order":
-              page.waitAndClick( page.orderElement );
-              break;
-      }
-    }
     @When("^Verify items are displayed$")
     public void verify_items_are_displayed(DataTable table){
         List<Map<String, String>> mapList = table.asMaps( String.class, String.class );

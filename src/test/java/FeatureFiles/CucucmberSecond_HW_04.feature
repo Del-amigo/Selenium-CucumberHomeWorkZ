@@ -14,6 +14,6 @@ Feature: Verification the data
       | Milltown, WI  |
       | US            |
       | 81734         |
-      | VISA          |
+      | Visa          |
       | 111222111222  |
       | 06/08         |

@@ -1,6 +1,6 @@
 package PomZ;
 
-import Utils.BaseDriver;
+import Utils.ThreadLocalBaseDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -14,7 +14,7 @@ public class BasePom {
     protected WebDriver driver;
 
     public BasePom() {
-        driver = BaseDriver.getDriver();
+        driver = ThreadLocalBaseDriver.getDriver();
         wait = new WebDriverWait( driver, 10 );
         PageFactory.initElements( driver, this );
     }
