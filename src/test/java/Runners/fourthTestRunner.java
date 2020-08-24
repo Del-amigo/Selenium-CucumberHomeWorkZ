@@ -7,24 +7,25 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 import org.testng.annotations.*;
 
 @CucumberOptions(
-        plugin = { "html:target/cucumber-report",
+        plugin = {"html:target/cucumber-report",
                 "com.cucumber.listener.ExtentCucumberFormatter:target/extent_report/index.html"},
-        features = {"src/test/java/FeatureFiles/CucucmberSecond_HW_01.feature"},
+        features = {"src/test/java/FeatureFiles/CucucmberSecond_HW_04.feature"},
         glue = {"StepDefinition"}
 )
-public class firstTestRunner extends AbstractTestNGCucumberTests {
+public class fourthTestRunner extends AbstractTestNGCucumberTests {
     @Parameters("browser")
     @BeforeClass
     public void configureBrowser(@Optional("chrome") String browser) {
-        ThreadLocalBaseDriver.setBrowser(browser);
+        ThreadLocalBaseDriver.setBrowser( browser );
     }
+
     @AfterClass
     public void quiteDriver() {
         ThreadLocalBaseDriver.quitDriver();
     }
 
     @AfterClass
-    public void configReport(){
-        Reporter.loadXMLConfig("src/test/java/Runners/ReportTypes/report.xml");
+    public void configReport() {
+        Reporter.loadXMLConfig( "src/test/java/Runners/ReportTypes/report.xml" );
     }
 }

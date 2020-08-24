@@ -23,7 +23,7 @@ public class ThirdPartOfHomeWork {
             page.waitAndSendKeys(page.cardNumberInputElement,fieldMap.get( "CardNumber" ) );
             page.waitAndSendKeys(page.expirationDateElement,fieldMap.get( "ExpireDate" ) );
 
-//            boolean errorExists = page.findErrorNextTo( fieldMap.get( "ErrorNextTo" ) );
+            boolean errorExists = page.findErrorNextTo( fieldMap.get( "ErrorNextTo" ) );
 //            Assert.assertEquals( errorExists,!fieldMap.get( "ErrorNextTo" ).isEmpty(),"Expected error in " + fieldMap.get("errorIn") + " to exist!" );
         }
     }

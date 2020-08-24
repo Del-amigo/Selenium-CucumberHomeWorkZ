@@ -9,10 +9,10 @@ import org.testng.annotations.*;
 @CucumberOptions(
         plugin = { "html:target/cucumber-report",
                 "com.cucumber.listener.ExtentCucumberFormatter:target/extent_report/index.html"},
-        features = {"src/test/java/FeatureFiles/CucucmberSecond_HW_01.feature"},
+        features = {"src/test/java/FeatureFiles/CucucmberSecond_HW_03.feature"},
         glue = {"StepDefinition"}
 )
-public class firstTestRunner extends AbstractTestNGCucumberTests {
+public class thirdTestRunner extends AbstractTestNGCucumberTests {
     @Parameters("browser")
     @BeforeClass
     public void configureBrowser(@Optional("chrome") String browser) {
