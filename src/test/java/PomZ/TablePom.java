@@ -55,6 +55,8 @@ public class TablePom extends BasePom {
     public WebElement processSubmitButton;
     @FindBy(xpath = "//strong[contains(text(),'successfully added')]")
     public WebElement successMessage;
+    @FindBy(css = "[id*='_UpdateButton']")
+    public WebElement updateSubmitButton;
 
     public String getText(int num) {
         String value = "";

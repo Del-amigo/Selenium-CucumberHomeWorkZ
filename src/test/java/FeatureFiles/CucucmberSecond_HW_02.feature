@@ -35,6 +35,9 @@ Feature: Verification the count of items
     # Because items are 8 by default, U can see first.feature* file
     And Verify the data of the "Bruce Lee"
     Then Create an orders with different product Type in the dropdown
+      | ScreenSaver |
+      | FamilyAlbum |
+      | MyMoney     |
 
 
 

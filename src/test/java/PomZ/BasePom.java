@@ -38,9 +38,8 @@ public class BasePom {
         return wait.until( ExpectedConditions.elementToBeClickable( webElement ) );
     }
 
-    public String dropdownSelectorByText(WebElement element, String text) {
+    public void dropdownSelectorByText(WebElement element, String text) {
         Select select = new Select( element );
         select.selectByVisibleText( text );
-        return "";
     }
 }

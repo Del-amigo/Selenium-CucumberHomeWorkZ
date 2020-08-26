@@ -18,10 +18,10 @@ public class secondTestRunner extends AbstractTestNGCucumberTests {
     public void configureBrowser(@Optional("chrome") String browser) {
         ThreadLocalBaseDriver.setBrowser(browser);
     }
-    @AfterClass
-    public void quiteDriver() {
-        ThreadLocalBaseDriver.quitDriver();
-    }
+//    @AfterClass
+//    public void quiteDriver() {
+//        ThreadLocalBaseDriver.quitDriver();
+//    }
 
     @AfterClass
     public void configReport(){
